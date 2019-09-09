@@ -1,9 +1,9 @@
 
-<PCName>
+PCAction
 =========
 maintained by [PandaClouds.com](https://pandaclouds.com)
 
-`<PCName>` provides a clean way to <description>.
+`PCAction` is the "Action" library for the Pages SDK Clients.
 
 
 Installation
@@ -16,7 +16,7 @@ Installation
 3. Please run the following command.
 
 ```
-npm install --save @panda-clouds/<panda-blank>
+npm install --save @panda-clouds/action
 ```
 
 Usage
@@ -25,13 +25,13 @@ Usage
 ### Node.js
 
 ```javascript
-const <PCName> = require('@panda-clouds/<panda-blank>');
+const PCAction = require('@panda-clouds/action');
 
 // example usage
 
 ```
 
-You can replace <PCName> with any variable.
+You can replace PCAction with any variable.
 
 
 Methods
@@ -48,8 +48,23 @@ Example:
 
 ```javascript
 Parse.Cloud.beforeSave('Book', request =>{
-	const data = new <PCName>(request);
-	data.prop('title').mustExist();    // will throw Error if request.object.get('title') doesn't exist
+	let button = PCAction.alertButton('ok');
+	return PCAction.showAlert('oops!','We couldn\'t find your account',[]); // =>
+	/*
+{
+  "type": "showAlert",
+  "title": "oops!",
+  "message": "We couldn't find your account",
+  "buttons": [
+    {
+      "title": "ok",
+      "action": {
+        "type": "nothing"
+      }
+    }
+  ]
+}
+	*/
 });
 ```
 
@@ -60,8 +75,8 @@ Contributions
 
 Pull requests are welcome! here is a checklist to speed things up:
 
-- modify `<PCName>.js`
-- add unit tests in `<PCName>.spec.js`
+- modify `PCAction.js`
+- add unit tests in `PCAction.spec.js`
 - run `npm test`
 - document method in `README.md`
 - add your name to 'Contributors' in `README.md`
@@ -74,4 +89,4 @@ Pull requests are welcome! here is a checklist to speed things up:
 - [*] [Marc Smith](https://github.com/mrmarcsmith)
 
 
-[Unit Tests]: https://github.com/panda-clouds/string/blob/master/spec/<PCName>.spec.js
+[Unit Tests]: https://github.com/panda-clouds/string/blob/master/spec/PCAction.spec.js

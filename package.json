@@ -1,14 +1,14 @@
 {
-  "name": "@panda-clouds/<panda-blank>",
+  "name": "@panda-clouds/action",
   "scripts": {
     "pretest": "eslint --fix .",
     "test": "jest"
   },
-  "description": "<description>",
+  "description": "The Action library for the Pages SDK Library",
   "version": "0.1.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/panda-clouds/<panda-blank>.git"
+    "url": "https://github.com/panda-clouds/action.git"
   },
   "author": {
     "name": "Marc Smith",
@@ -16,7 +16,7 @@
     "url": "https://github.com/mrmarcsmith"
   },
   "license": "MIT",
-  "main": "src/<PCName>.js",
+  "main": "src/PCAction.js",
   "engines": {
     "node": ">= 8"
   },
